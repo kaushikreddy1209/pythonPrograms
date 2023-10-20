@@ -7,4 +7,3 @@ if unit == 'L':
 elif unit == 'K':
     w = 2.2 * int(weight)
     print(f"Weight in Lbs is {w}")
-
