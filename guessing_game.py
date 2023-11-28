@@ -20,9 +20,3 @@ while number_of_tries < max_tries: #Loop breaks if max_tries is reached
 
 if number_of_tries == max_tries:
     print(f"You have reached your maximum number of tries. The secret number is {number}")
-
-
-
-    
-
-
