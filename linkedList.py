@@ -66,7 +66,7 @@ class LinkedList():
                 break
             itr=itr.next
             count+=1
-               
+
     def remove_at(self,index):
         if index<0 or index>=self.get_length():
             raise Exception ("Invalid index")
@@ -85,20 +85,33 @@ class LinkedList():
     
     def remove_all(self):
         self.head=None
-
-
-ll = LinkedList()
-ll.insert_values(["banana","mango","grapes","orange"])
-ll.print()
-ll.insert_at_beginning("apple")
-ll.print()
-ll.insert_at_end("jackfruit")
-ll.print()
-ll.insert_at(3,"guava")
-ll.print()
-ll.remove_at(3)
-ll.print()
-ll.remove_all()
-ll.print()
-
     
+    def search_val(self,data):
+        if self.head is None:
+            raise Exception("Linked list is empty, value cannot be found")
+        count=0
+        itr=self.head
+        while itr:
+            if itr.data==data:
+                return count
+            count+=1
+            itr=itr.next
+    
+    
+
+
+# ll = LinkedList()
+# ll.insert_values(["banana","mango","grapes","orange"])
+# ll.print()
+# ll.insert_at_beginning("apple")
+# ll.print()
+# ll.insert_at_end("jackfruit")
+# ll.print()
+# ll.insert_at(3,"guava")
+# ll.print()
+# ll.remove_at(3)
+# ll.print()
+# ll.remove_all()
+# ll.print()
+# ll.insert_values(["will","you","be","my","Valentine??", "Please say yes"])
+# print(ll.search_val("Valentine"))
